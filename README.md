@@ -1,27 +1,5 @@
 # Youtube Challenge - Python
-The Python Youtube Challenge uses Python3. 
-The below commands use Python3 specifically, to account for users that might 
-have Python2 installed alongside Python3.
-
-NOTE: **Please do not edit videos.txt as it will cause tests to break. There is no need to modify this file to complete this challenge.**
-
-## Installing Python and pytest
-[This guide](https://realpython.com/installing-python/) explains how to check if you already
-have Python installed, and if not, how to install it on your machine.
-Please make sure you install Python 3.7 or higher.
-
-The tests are using `pytest`, if you don't have `pytest` installed yet, you can do so by running:
-```shell script
-python3 -m pip install pytest
-```
-
-pip should be installed already if you installed Python from the official source. If not, you
-can find many guides online on how to install pip for your operating system.
-
-## Setting up
-You can write code in any editor you'd like. However, different editors have 
-different ways of dealing with Python code, so in case of doubt we recommend 
-you run the code and tests from the command line as shown  below.
+My submission for the YT CLI challenge. This python application is command line interface acting as a mini youtube player.
 
 ## Running and testing from the Commandline
 To run the command-line application:
@@ -48,25 +26,26 @@ python3 -m pytest test/part3_test.py
 python3 -m pytest test/part4_test.py
 ```
 
-For more information on pytest commandline options, such as only running a specific test,
-you can read more [here](https://docs.pytest.org/en/6.2.x/usage.html#).
+## COMMANDS
+`HELP` - displays all commands
+`NUMBER_OF_VIDEOS` - displays number of videos
+`SHOW_ALL_VIDEOS` - displays whole library
+`PLAY <VIDEO_ID>` - plays a video
+`PLAY_RANDOM` - plays a random video
+`STOP` - stops currently playing video
+`PAUSE` - pauses the video if it playing
+`CONTINUE` - continues a paused video
+`SHOW_PLAYING` - shows what video is playing
 
-## Running and testing from IntelliJ/PyCharm
-* Mark both the `python/` and `src/` directory as Sources Root
-    * (Right-click on src/ > Mark Directory As > Sources Root )
-* Mark the  `test/` directory as Test Sources Root
-    * (Right-click on test/ > Mark Directory As > Test Sources Root)
+`CREATE_PLAYLIST <PLAYLIST NAME>` - creates a playlist 
+`ADD_TO_PLAYLIST <PLAYLIST NAME> <VIDEO ID>` - adds a video to a playlist
+`REMOVE_FROM_PLAYLIST <PLAYLIST NAME> <VIDEO ID>` - removes a video from a playlist
+`CLEAR_PLAYLIST <PLAYLIST NAME>` - clears all videos from a playlist
+`DELETE_PLAYLIST <PLAYLIST NAME>` - deletes a playlist
+`SHOW_PLAYLIST <PLAYLIST NAME>` - shows contents of a playlist
+`SHOW_ALL_PLAYLISTS` - shows all playlists created
 
-This will allow your editor to correctly index the project.
-
-To run the Application, create a new "Run/Debug configuration":
-* Run > Edit Configurations > "+" Button > Python
-![intellij_setup](intellij_setup.png)
-
-To run the tests, add a pytest configuration as follows:
-* Run > Edit Configurations > "+" Button > Python tests > pytest
-
-![intellij_test_setup](intellij_test_setup.png)
-
-Then you will be able to run and debug the unit tests.
-
+`SEARCH_VIDEOS <SEARCH TERM>` - search the video library for titles with search term
+`SEARCH_VIDEOS_WITH_TAG <TAG>` - search the video library for the desired tag
+`FLAG_VIDEO <VIDEO ID> <OPTIONAL REASON>` - flag a video with an optional reason. This video cannot be played or added to any playlist thereafter.
+`ALLOW_VIDEO <VIDEO ID>` - unflag a video.
